@@ -1,0 +1,47 @@
+schema-version: 1.0.0
+application-family: Miscellaneous
+application-name: GitLab
+application-version: 6.4
+flavor: Single Linux server
+flavor-weight: 1
+reach-info:
+  tattoo: https://0b5294b243620310a700-e388a7f3aba385a925111b1fc6f680d4.ssl.cf2.rackcdn.com/gitlab-tattoo.png
+  icon-20x20: https://0b5294b243620310a700-e388a7f3aba385a925111b1fc6f680d4.ssl.cf2.rackcdn.com/gitlab-icon-20x20.png
+hidden_outputs:
+  - private_key
+  - gitlab_admin_password
+abstract: |
+  Gitlab is an open-source solution for hosting source code repositories that
+  use the Git version control system.
+instructions: |
+  #### Getting Started
+  [GitLab](http://gitlab.org/gitlab-ce/) is an open source, web based
+  application that enables users to collaborate on code.
+
+  #### Accessing Your Deployment
+  To access your GitLab deployment, take the IP of the GitLab server and plug
+  it in your browser. By default it will redirect you to https and you'll get a
+  warning since a self signed certificate is installed.
+
+  Login with account name `root` using the password from the
+  `gitlab_admin_password` output
+
+  #### Logging in via SSH
+  The private key provided in the passwords section can be used to login as
+  root via SSH.  We have an article on how to use these keys with [Mac OS X
+  and Linux](http://www.rackspace.com/knowledge_center/article/logging-in-with-a-ssh-private-key-on-linuxmac)
+  as well as [Windows using
+  PuTTY](http://www.rackspace.com/knowledge_center/article/logging-in-with-a-ssh-private-key-on-windows).
+
+  #### Details of Your Setup
+
+  Gitlab is installed using the [Gitlab Omnibus installer](https://gitlab.com/gitlab-org/omnibus-gitlab)
+
+  Full documentation is available in [the Gitlab Omnibus README file](https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/README.md).
+
+  * [How to start and stop gitlab components](https://gitlab.com/gitlab-org/omnibus-gitlab/blob/master/README.md#starting-and-stopping)
+
+user-input-required: false
+description: |
+  Single Linux server running [GitLab 7.8.1](http://gitlab.org/) with a
+  [MySQL](http://www.mysql.com/) back end.
