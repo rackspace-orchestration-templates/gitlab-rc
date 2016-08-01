@@ -1,6 +1,7 @@
 heat_template_version: 2015-10-15
 
 description: |
+  ####Single Linux server - RCv3
   Single Linux server running [GitLab 7.8.1](http://gitlab.org/) with a
   [PostgreSQL](http://www.postgresql.org/) back end.
 
@@ -168,7 +169,7 @@ resources:
           str_replace:
             template: "http://ipaddr"
             params:
-              ipaddr: { get_attr: [gitlab_server, accessIPv4] }
+              ipaddr: { get_attr: [gitlab_server_public_ip, public_ip_v4] }
       metadata:
         rax-heat: { get_param: "OS::stack_id" }
         stack-name: { get_param: "OS::stack_name" }
@@ -179,7 +180,7 @@ resources:
       - Chicago (ORD)
       - Dallas Fort Worth (DFW)
       - London (LON)
-      target_hostname: { get_attr: [gitlab_server, accessIPv4] }
+      target_hostname: { get_attr: [gitlab_server_public_ip, public_ip_v4] }
       target_receiver: IPv4
   #Cloud Backup
   gitlab_backup:

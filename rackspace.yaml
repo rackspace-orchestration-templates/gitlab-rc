@@ -2,8 +2,9 @@ schema-version: 1.0.0
 application-family: Miscellaneous
 application-name: GitLab
 application-version: 6.4
-flavor: Single Linux server
+flavor: Single Linux server - RCv3
 flavor-weight: 1
+rackconnect: true
 reach-info:
   tattoo: https://0b5294b243620310a700-e388a7f3aba385a925111b1fc6f680d4.ssl.cf2.rackcdn.com/gitlab-tattoo.png
   icon-20x20: https://0b5294b243620310a700-e388a7f3aba385a925111b1fc6f680d4.ssl.cf2.rackcdn.com/gitlab-icon-20x20.png
@@ -43,5 +44,6 @@ instructions: |
 
 user-input-required: false
 description: |
+  ####Single Linux server - RCv3
   Single Linux server running [GitLab 7.8.1](http://gitlab.org/) with a
   [MySQL](http://www.mysql.com/) back end.
