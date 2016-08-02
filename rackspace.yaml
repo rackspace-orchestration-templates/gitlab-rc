@@ -44,6 +44,6 @@ instructions: |
 
 user-input-required: false
 description: |
-  ####Single Linux server - RCv3
+  #### Single Linux server - RCv3
   Single Linux server running [GitLab 7.8.1](http://gitlab.org/) with a
   [MySQL](http://www.mysql.com/) back end.
