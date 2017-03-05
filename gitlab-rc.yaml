@@ -190,7 +190,7 @@ resources:
       server: { get_resource: gitlab_server }
       BackupConfigurationName:
         str_replace:
-          template: stack Weekly Backup
+          template: stack Daily Backup
           params:
             stack: { get_param: "OS::stack_name" }
       Inclusions:
